@@ -16,13 +16,13 @@ The Anonymizer gem adds two methods to Your Active Record Models:
 data_to_anonymize is a class method.
 It is used to configure which attributes should be anonymized. In Your model it is called like this:
 ```ruby
-class Foo << ApplicationRecord
+class Foo < ApplicationRecord
   data_to_anonymize :name
 end
 ```
 If You want to anonymize more than one attribute you have to wrap the attributes in an Array e.g. like this:
 ```ruby
-class Foo << ApplicationRecord
+class Foo < ApplicationRecord
   serialize :submitted_input
   data_to_anonymize [:name, :age, {submitted_input: { user_location: [:city, :country] }]
 end
