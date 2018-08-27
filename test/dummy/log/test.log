@@ -15,3 +15,200 @@
   [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "form_submissions" ("submitted_input", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["submitted_input", "---\n:age: '23'\n:name: Tim\n:surname: Test\n"], ["created_at", "2018-08-27 10:56:54.432018"], ["updated_at", "2018-08-27 10:56:54.432018"]]
   [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
   [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (2.0ms)[0m  [1mCREATE TABLE "form_submissions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "submitted_input" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (1.4ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "form_data" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (1.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.5ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20180827110218')[0m
+  [1m[35m (1.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20180827092438')
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "form_submissions" ("submitted_input", "created_at", "updated_at") VALUES (?, ?, ?)  [["submitted_input", "---\n:age: '23'\n:name: Tim\n:surname: Test\n"], ["created_at", "2018-08-27 11:28:20.709738"], ["updated_at", "2018-08-27 11:28:20.709738"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "form_submissions" ("submitted_input", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["submitted_input", "---\n:age: '23'\n:name: Tim\n:surname: Test\n"], ["created_at", "2018-08-27 11:28:20.714983"], ["updated_at", "2018-08-27 11:28:20.714983"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "form_submissions" ("submitted_input", "created_at", "updated_at") VALUES (?, ?, ?)  [["submitted_input", "---\n:age: '23'\n:name: Tim\n:surname: Test\n"], ["created_at", "2018-08-27 11:32:01.139696"], ["updated_at", "2018-08-27 11:32:01.139696"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "form_submissions" ("submitted_input", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["submitted_input", "---\n:age: '23'\n:name: Tim\n:surname: Test\n"], ["created_at", "2018-08-27 11:32:01.143878"], ["updated_at", "2018-08-27 11:32:01.143878"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "form_submissions" ("submitted_input", "created_at", "updated_at") VALUES (?, ?, ?)  [["submitted_input", "---\n:age: '23'\n:name: Tim\n:surname: Test\n"], ["created_at", "2018-08-27 11:35:43.125458"], ["updated_at", "2018-08-27 11:35:43.125458"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.4ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "form_submissions" ("submitted_input", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["submitted_input", "---\n:age: '23'\n:name: Tim\n:surname: Test\n"], ["created_at", "2018-08-27 11:35:43.133353"], ["updated_at", "2018-08-27 11:35:43.133353"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "form_submissions" ("submitted_input", "created_at", "updated_at") VALUES (?, ?, ?)  [["submitted_input", "---\n:age: '23'\n:name: Tim\n:surname: Test\n"], ["created_at", "2018-08-27 11:37:27.090702"], ["updated_at", "2018-08-27 11:37:27.090702"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.9ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "form_submissions" ("submitted_input", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["submitted_input", "---\n:age: '23'\n:name: Tim\n:surname: Test\n"], ["created_at", "2018-08-27 11:37:27.097005"], ["updated_at", "2018-08-27 11:37:27.097005"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.7ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "form_submissions" ("submitted_input", "created_at", "updated_at") VALUES (?, ?, ?)  [["submitted_input", "---\n:age: '23'\n:name: Tim\n:surname: Test\n"], ["created_at", "2018-08-27 11:39:48.522256"], ["updated_at", "2018-08-27 11:39:48.522256"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "form_submissions" ("submitted_input", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["submitted_input", "---\n:age: '23'\n:name: Tim\n:surname: Test\n"], ["created_at", "2018-08-27 11:39:48.527151"], ["updated_at", "2018-08-27 11:39:48.527151"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("form_data", "created_at", "updated_at") VALUES (?, ?, ?)  [["form_data", "{\"full_name\":\"Tina Test\",\"phone_number\":\"010/1234567\",\"email\":\"tina@test.de\",\"street_address\":\"Teststrasse1\",\"post_code\":\"12345\",\"city\":\"Berlin\"}"], ["created_at", "2018-08-27 11:39:48.533027"], ["updated_at", "2018-08-27 11:39:48.533027"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("form_data", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["form_data", "{\"full_name\":\"Tina Test\",\"phone_number\":\"010/1234567\",\"email\":\"tina@test.de\",\"street_address\":\"Teststrasse1\",\"post_code\":\"12345\",\"city\":\"Berlin\"}"], ["created_at", "2018-08-27 11:39:48.538462"], ["updated_at", "2018-08-27 11:39:48.538462"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "form_submissions" ("submitted_input", "created_at", "updated_at") VALUES (?, ?, ?)  [["submitted_input", "---\n:age: '23'\n:name: Tim\n:surname: Test\n"], ["created_at", "2018-08-27 11:40:42.668615"], ["updated_at", "2018-08-27 11:40:42.668615"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "form_submissions" ("submitted_input", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["submitted_input", "---\n:age: '23'\n:name: Tim\n:surname: Test\n"], ["created_at", "2018-08-27 11:40:42.674691"], ["updated_at", "2018-08-27 11:40:42.674691"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("form_data", "created_at", "updated_at") VALUES (?, ?, ?)  [["form_data", "{\"full_name\":\"Tina Test\",\"phone_number\":\"010/1234567\",\"email\":\"tina@test.de\",\"street_address\":\"Teststrasse1\",\"post_code\":\"12345\",\"city\":\"Berlin\"}"], ["created_at", "2018-08-27 11:40:42.680376"], ["updated_at", "2018-08-27 11:40:42.680376"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("form_data", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["form_data", "{\"full_name\":\"Tina Test\",\"phone_number\":\"010/1234567\",\"email\":\"tina@test.de\",\"street_address\":\"Teststrasse1\",\"post_code\":\"12345\",\"city\":\"Berlin\"}"], ["created_at", "2018-08-27 11:40:42.684109"], ["updated_at", "2018-08-27 11:40:42.684109"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "form_submissions" ("submitted_input", "created_at", "updated_at") VALUES (?, ?, ?)  [["submitted_input", "---\n:age: '23'\n:name: Tim\n:surname: Test\n"], ["created_at", "2018-08-27 11:41:50.915220"], ["updated_at", "2018-08-27 11:41:50.915220"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "form_submissions" ("submitted_input", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["submitted_input", "---\n:age: '23'\n:name: Tim\n:surname: Test\n"], ["created_at", "2018-08-27 11:41:50.919688"], ["updated_at", "2018-08-27 11:41:50.919688"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("form_data", "created_at", "updated_at") VALUES (?, ?, ?)  [["form_data", "{\"full_name\":\"Tina Test\",\"phone_number\":\"010/1234567\",\"email\":\"tina@test.de\",\"street_address\":\"Teststrasse1\",\"post_code\":\"12345\",\"city\":\"Berlin\"}"], ["created_at", "2018-08-27 11:41:50.925037"], ["updated_at", "2018-08-27 11:41:50.925037"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("form_data", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["form_data", "{\"full_name\":\"Tina Test\",\"phone_number\":\"010/1234567\",\"email\":\"tina@test.de\",\"street_address\":\"Teststrasse1\",\"post_code\":\"12345\",\"city\":\"Berlin\"}"], ["created_at", "2018-08-27 11:41:50.929129"], ["updated_at", "2018-08-27 11:41:50.929129"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "form_submissions" ("submitted_input", "created_at", "updated_at") VALUES (?, ?, ?)  [["submitted_input", "---\n:age: '23'\n:name: Tim\n:surname: Test\n"], ["created_at", "2018-08-27 11:55:16.916974"], ["updated_at", "2018-08-27 11:55:16.916974"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "form_submissions" ("submitted_input", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["submitted_input", "---\n:age: '23'\n:name: Tim\n:surname: Test\n"], ["created_at", "2018-08-27 11:55:16.922601"], ["updated_at", "2018-08-27 11:55:16.922601"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("form_data", "created_at", "updated_at") VALUES (?, ?, ?)  [["form_data", "{\"full_name\":\"Tina Test\",\"phone_number\":\"010/1234567\",\"email\":\"tina@test.de\",\"street_address\":\"Teststrasse1\",\"post_code\":\"12345\",\"city\":\"Berlin\"}"], ["created_at", "2018-08-27 11:55:16.929104"], ["updated_at", "2018-08-27 11:55:16.929104"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("form_data", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["form_data", "{\"full_name\":\"Tina Test\",\"phone_number\":\"010/1234567\",\"email\":\"tina@test.de\",\"street_address\":\"Teststrasse1\",\"post_code\":\"12345\",\"city\":\"Berlin\"}"], ["created_at", "2018-08-27 11:55:16.932539"], ["updated_at", "2018-08-27 11:55:16.932539"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "form_submissions" ("submitted_input", "created_at", "updated_at") VALUES (?, ?, ?)  [["submitted_input", "---\n:age: '23'\n:name: Tim\n:surname: Test\n"], ["created_at", "2018-08-27 11:55:30.720406"], ["updated_at", "2018-08-27 11:55:30.720406"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "form_submissions" ("submitted_input", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["submitted_input", "---\n:age: '23'\n:name: Tim\n:surname: Test\n"], ["created_at", "2018-08-27 11:55:30.726840"], ["updated_at", "2018-08-27 11:55:30.726840"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("form_data", "created_at", "updated_at") VALUES (?, ?, ?)  [["form_data", "{\"full_name\":\"Tina Test\",\"phone_number\":\"010/1234567\",\"email\":\"tina@test.de\",\"street_address\":\"Teststrasse1\",\"post_code\":\"12345\",\"city\":\"Berlin\"}"], ["created_at", "2018-08-27 11:55:30.732338"], ["updated_at", "2018-08-27 11:55:30.732338"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("form_data", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["form_data", "{\"full_name\":\"Tina Test\",\"phone_number\":\"010/1234567\",\"email\":\"tina@test.de\",\"street_address\":\"Teststrasse1\",\"post_code\":\"12345\",\"city\":\"Berlin\"}"], ["created_at", "2018-08-27 11:55:30.735333"], ["updated_at", "2018-08-27 11:55:30.735333"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "form_submissions" ("submitted_input", "created_at", "updated_at") VALUES (?, ?, ?)  [["submitted_input", "---\n:age: '23'\n:name: Tim\n:surname: Test\n"], ["created_at", "2018-08-27 12:01:22.257459"], ["updated_at", "2018-08-27 12:01:22.257459"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "form_submissions" ("submitted_input", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["submitted_input", "---\n:age: '23'\n:name: Tim\n:surname: Test\n"], ["created_at", "2018-08-27 12:01:22.262867"], ["updated_at", "2018-08-27 12:01:22.262867"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("form_data", "created_at", "updated_at") VALUES (?, ?, ?)  [["form_data", "{\"full_name\":\"Tina Test\",\"phone_number\":\"010/1234567\",\"email\":\"tina@test.de\",\"street_address\":\"Teststrasse1\",\"post_code\":\"12345\",\"city\":\"Berlin\"}"], ["created_at", "2018-08-27 12:01:22.269029"], ["updated_at", "2018-08-27 12:01:22.269029"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("form_data", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["form_data", "{\"full_name\":\"Tina Test\",\"phone_number\":\"010/1234567\",\"email\":\"tina@test.de\",\"street_address\":\"Teststrasse1\",\"post_code\":\"12345\",\"city\":\"Berlin\"}"], ["created_at", "2018-08-27 12:01:22.272093"], ["updated_at", "2018-08-27 12:01:22.272093"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m

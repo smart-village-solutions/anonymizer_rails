@@ -5,13 +5,14 @@ module AnonymizerRails
 
       included do
         def anonymize_data
-          perform_on_attributes(@@attributes_to_anonymize)
+          perform_on_attributes(self.attributes_to_anonymize)
         end
       end
 
       class_methods do
-        def attributes_to_anonymize(options = {})
-          @@attributes_to_anonymize = options
+        def data_to_anonymize(options = {})
+          cattr_accessor :attributes_to_anonymize
+          self.attributes_to_anonymize = options
         end
       end
 
