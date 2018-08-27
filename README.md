@@ -1,9 +1,10 @@
 # AnonymizerRails
 Sometimes it is necessary to scramble user_data in a clean and fast way.
-AnonymizerRails provides the Functionality to AnonymizerRails is a small gem  for Rails
-from Version 4.2 onwards, to anonymize attributes of an
-ActiveRecord Model. It doesn't matter if the attributes is a serialized_hash or an ActiveRecord:Store,
-you can anonymize any attribute/key no matter how deep it is nested. The attributes values are replaced with a string of 6 x's
+AnonymizerRails provides the Functionality to do this. AnonymizerRails is a small gem  for Rails
+4.2 and higher, to anonymize attributes of an ActiveRecord Model. It doesn't matter if the attribute
+is a serialized_hash or an ActiveRecord:Store, you can anonymize any attribute/key no matter how deep
+it is nested. The attributes values are replaced with a string of 6 x's
+
 ```
 "xxxxxx"
 ```
