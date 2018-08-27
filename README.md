@@ -1,7 +1,9 @@
 # AnonymizerRails
-AnonymizerRails is a small gem  for Rails from Version 4.2 onwards, to anonymize attributes of an
-ActiveRecord Model. It doesn't matter if the attributes is a serialized_hash or an ActiveRecord:Store, you can anonymize any attribute/key
-no matter how deep it is nested. The attributes values are replaced with a string of 6 x's
+Sometimes it is necessary to scramble user_data in a clean and fast way.
+AnonymizerRails provides the Functionality to AnonymizerRails is a small gem  for Rails
+from Version 4.2 onwards, to anonymize attributes of an
+ActiveRecord Model. It doesn't matter if the attributes is a serialized_hash or an ActiveRecord:Store,
+you can anonymize any attribute/key no matter how deep it is nested. The attributes values are replaced with a string of 6 x's
 ```
 "xxxxxx"
 ```
@@ -9,7 +11,31 @@ Anonymization for associated models' attributes will be implemented in a future 
 of the gem.
 
 ## Usage
-The Anonymizer gem provides two methods t
+The Anonymizer gem adds two methods to Your Active Record Models:
+data_to_anonymize is a class method.
+It is used to configure which attributes should be anonymized. In Your model it is called like this:
+```ruby
+class Foo << ApplicationRecord
+  data_to_anonymize :name
+end
+```
+If You want to anonymize more than one attribute you have to wrap the attributes in an Array e.g. like this:
+```ruby
+class Foo << ApplicationRecord
+  serialize :submitted_input
+  data_to_anonymize [:name, :age, {submitted_input: { user_location: [:city, :country] }]
+end
+```
+
+The above code tells the gem that when anonymize_data is called on any instance of Foo it should anonymize
+the attributes name, age, submitted_input[:user_location][:city] and submitted_input[:user_location][:country]
+
+anonymize_data is an instance method added to every ActiveRecord instance. When called on a record it
+anonymizes the configured attributes.
+
+####Attention: The anonymize_data method doesn't save the anonymized record to the database.
+####After calling it You have to call save on every oinstance you just anonymized.
+
 ## Installation
 Add this line to your application's Gemfile if You want use it with Rails 5.2 or higher:
 
