@@ -1,5 +1,5 @@
 .bundle/
-log/*.log
+
 pkg/
 test/dummy/db/*.sqlite3
 test/dummy/db/*.sqlite3-journal
@@ -8,3 +8,29 @@ test/dummy/node_modules/
 test/dummy/yarn-error.log
 test/dummy/storage/
 test/dummy/tmp/
+
+# Ignore all logfiles and tempfiles.
+/log/*
+!/log/.keep
+/tmp
+/config/database.yml
+/config/unicorn.rb
+.rvmrc
+.powrc
+.byebug_history
+coverage
+/public/system/*
+/.DS_Store
+.DS_Store
+db/githook_dumps
+.byebug_history
+dump.rdb
+
+db/*.sql
+/dump.rdb
+/.vscode
+/.idea
+
+config/settings.local.yml
+config/settings/*.local.yml
+config/environments/*.local.yml
