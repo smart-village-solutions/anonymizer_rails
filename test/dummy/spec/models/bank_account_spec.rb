@@ -9,7 +9,6 @@ RSpec.describe BankAccount, type: :model do
     @bank_account.anonymize_data
   end
 
-
   describe "#anonymize_data" do
     it "anonymizes the configured attributes" do
       create_and_anonymize_bank_account
