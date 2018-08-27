@@ -13,7 +13,8 @@ Anonymization for associated models' attributes will be implemented in a future 
 of the gem.
 
 ## Usage
-The Anonymizer gem adds two methods to Your Active Record Models:
+The Anonymizer gem adds two methods to Your Active Record Models, data_to_anonymize and anonymize_data.
+
 data_to_anonymize is a class method.
 It is used to configure which attributes should be anonymized. In Your model it is called like this:
 ```ruby
