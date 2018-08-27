@@ -1,3 +1,4 @@
+
 $:.push File.expand_path("lib", __dir__)
 
 # Maintain your gem's version:
@@ -10,13 +11,14 @@ Gem::Specification.new do |s|
   s.authors     = ["Sebastian Peter"]
   s.email       = ["sebastian.peter@ikusei.de"]
   s.homepage    = "https://github.com/acousma82/anonymizer_rails"
-  s.summary     = "AnonymizerRails is a gem that anonymizes dabase attributes of AR Models"
+  s.summary     = "AnonymizerRails is a gem that anonymizes database attributes of AR Models"
   s.description = "Anonymizes ActiveRecord Models"
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
-  s.add_dependency "rails", "~> 5.2.0"
+  s.add_dependency "rails", "~> 4.2.0"
+  s.add_dependency "rspec-rails"
 
   s.add_development_dependency "sqlite3"
 end

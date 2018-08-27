@@ -81,3 +81,5 @@ module AnonymizerRails
         to_set[final_key] = value unless to_set[final_key].blank?
       end
 end
+
+ActiveRecord::Base.send :include, AnonymizerRails
