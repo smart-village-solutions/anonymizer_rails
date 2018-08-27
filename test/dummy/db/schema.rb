@@ -10,10 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_20_104525) do
+ActiveRecord::Schema.define(version: 2018_08_27_131242) do
+
+  create_table "bank_accounts", force: :cascade do |t|
+    t.string "bic"
+    t.string "iban"
+    t.string "name"
+    t.string "surname"
+    t.text "address"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "form_submissions", force: :cascade do |t|
     t.text "submitted_input"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.text "form_data"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
