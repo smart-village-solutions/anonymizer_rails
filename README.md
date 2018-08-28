@@ -37,7 +37,7 @@ anonymize_data is an instance method added to every ActiveRecord instance. When 
 anonymizes the configured attributes:
 
 ```ruby
-@foo = Foo.create( name: "Tim", surname: "Test", bic: "BKR532836FR",
+ @foo = Foo.create( name: "Tim", surname: "Test", bic: "BKR532836FR",
                                         iban: "DE12345678",
                                         address: {zip: "12345", city: "Berlin" } )
  @foo.anonymize_data
