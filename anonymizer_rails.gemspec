@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   s.description = "Anonymizes ActiveRecord Models"
   s.license     = "MIT"
 
-  s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
+  s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md", "spec/**/*"]
 
   s.add_dependency "rails", "~> 5.2.0"
   s.add_dependency "rspec-rails", "~> 3.7"

@@ -16,4 +16,6 @@ gemspec
 
 group :test, :development do
   gem "rspec-rails"
+  gem "simplecov"
+  gem "codeclimate-test-reporter", "~> 1.0.0"
 end
