@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    anonymizer_rails (0.2.0)
+    anonymizer_rails (1.2.0)
       rails (~> 5.2.0)
       rspec-rails (~> 3.7)
 

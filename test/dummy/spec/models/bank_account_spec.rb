@@ -5,7 +5,7 @@ RSpec.describe BankAccount, type: :model do
   def create_and_anonymize_bank_account
     @bank_account = BankAccount.create( name: "Tim", surname: "Test", bic: "BKR532836FR",
                                         iban: "DE12345678",
-                                        address: {zip: "12345", city: "Berlin" } )
+                                        address: { zip: "12345", city: "Berlin" } )
     @bank_account.anonymize_data
   end
 
