@@ -36,7 +36,11 @@ the attributes name, age, submitted_input[:user_location][:city] and submitted_i
 anonymize_data is an instance method added to every ActiveRecord instance. When called on a record it
 anonymizes the configured attributes.
 
-#### !!!Attention!!!: The anonymize_data method doesn't save the anonymized record to the database.
+```ruby
+#TODO
+```
+
+#### !!!Attention!!!: The `anonymize_data` method doesn't save the anonymized record to the database.
 #### After calling it, You have to call save on every instance you just anonymized.
 
 ## Installation
