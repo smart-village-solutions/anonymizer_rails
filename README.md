@@ -37,7 +37,13 @@ anonymize_data is an instance method added to every ActiveRecord instance. When 
 anonymizes the configured attributes.
 
 ```ruby
-#TODO
+@bank_account = BankAccount.create( name: "Tim", surname: "Test", bic: "BKR532836FR",
+                                        iban: "DE12345678",
+                                        address: {zip: "12345", city: "Berlin" } )
+ @bank_account.anonymize_data
+ @bank_account.save
+ @bank_account
+ #<BankAccount id: 1, bic: "xxxxxx", iban: "xxxxxx", name: "Tim", surname: "Test", address: {:zip=>"xxxxxx", :city=>"xxxxxx"}, created_at: "2018-08-28 14:20:42", updated_at: "2018-08-28 14:20:42">
 ```
 
 #### !!!Attention!!!: The `anonymize_data` method doesn't save the anonymized record to the database.
