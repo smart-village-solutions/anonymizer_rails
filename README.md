@@ -53,7 +53,7 @@ If you want to use it with a lower version of Rails 5 or 4 (Rails 4 only support
 just add this to your Gemfile:
 
 ```ruby
-gem "anonymizer_rails", git: "https://github.com/ikuseiGmbH/anonymizer_rails5", branch: "rails-4"
+gem "anonymizer_rails", git: "https://github.com/ikuseiGmbH/anonymizer_rails", branch: "rails-4"
 ```
 
 And then execute:
