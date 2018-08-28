@@ -25,8 +25,8 @@ end
 If You want to anonymize more than one attribute you have to wrap the attributes in an Array e.g. like this:
 ```ruby
 class Foo < ApplicationRecord
-  serialize :submitted_input
-  data_to_anonymize [:name, :age, {submitted_input: { user_location: [:city, :country] }]
+  serialize :address
+  data_to_anonymize [:bic, :iban, { address: [:city, :zip] }]
 end
 ```
 
@@ -34,10 +34,16 @@ The above code tells the gem that when anonymize_data is called on any instance 
 the attributes name, age, submitted_input[:user_location][:city] and submitted_input[:user_location][:country]
 
 anonymize_data is an instance method added to every ActiveRecord instance. When called on a record it
-anonymizes the configured attributes.
+anonymizes the configured attributes:
 
 ```ruby
-#TODO
+ @foo = Foo.create( name: "Tim", surname: "Test", bic: "BKR532836FR",
+                                        iban: "DE12345678",
+                                        address: {zip: "12345", city: "Berlin" } )
+ @foo.anonymize_data
+ @foo.save
+ @foo
+ #<Foo id: 1, bic: "xxxxxx", iban: "xxxxxx", name: "Tim", surname: "Test", address: {:zip=>"xxxxxx", :city=>"xxxxxx"}, created_at: "2018-08-28 14:20:42", updated_at: "2018-08-28 14:20:42">
 ```
 
 #### !!!Attention!!!: The `anonymize_data` method doesn't save the anonymized record to the database.
