@@ -1,4 +1,5 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/1c6d704b29a9599a3df7/maintainability)](https://codeclimate.com/github/ikuseiGmbH/anonymizer_rails5/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/1c6d704b29a9599a3df7/test_coverage)](https://codeclimate.com/github/ikuseiGmbH/anonymizer_rails5/test_coverage)
 # AnonymizerRails
 Sometimes it is necessary to scramble user_data in a clean and fast way.
 AnonymizerRails provides the Functionality to do this. AnonymizerRails is a small gem  for Rails
