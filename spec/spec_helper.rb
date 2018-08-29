@@ -1,6 +1,9 @@
 ENV['RAILS_ENV'] ||= 'test'
 require 'simplecov'
-SimpleCov.start
+SimpleCov.start do
+  add_filter "spec/dummy/spec"    # don't include the spec directory
+  add_filter "spec/dummy/config"
+end
 
 require File.expand_path("../dummy/config/environment.rb", __FILE__)
 require 'rspec/rails'
