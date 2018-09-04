@@ -10,9 +10,9 @@ module AnonymizerRails
       end
 
       class_methods do
-        def data_to_anonymize(options = {})
+        def data_to_anonymize(*args)
           cattr_accessor :attributes_to_anonymize
-          self.attributes_to_anonymize = options
+          self.attributes_to_anonymize = args
         end
       end
 
