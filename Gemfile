@@ -15,4 +15,5 @@ gemspec
 gem 'byebug', group: [:development, :test]
 group :test, :development do
   gem "rspec-rails"
+  gem "simplecov"
 end
