@@ -40,7 +40,7 @@ end
 ```
 
 The above code tells the gem that when `anonymize_data` is called on any instance of `Foo`, it should anonymize
-the attributes `name`, `age`, `submitted_input[:user_location][:city]` and `submitted_input[:user_location][:country]`.
+the attributes `bic`, `iban`, `address[:city]` and `address[:zip]`.
 
 `anonymize_data` is an instance method added to every `ActiveRecord` instance. When called on a record, it
 anonymizes the configured attributes:
